@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Industries | Expervia Technologies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;family=Manrope:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#3c1b73",
+                        "surface-container-highest": "#323537",
+                        "inverse-primary": "#6d3bd6",
+                        "on-background": "#e0e3e5",
+                        "tertiary": "#bec6e0",
+                        "secondary": "#d3bbff",
+                        "surface-tint": "#d0bcff",
+                        "on-primary-fixed": "#23005c",
+                        "primary-fixed": "#e9ddff",
+                        "tertiary-fixed": "#dae2fd",
+                        "on-secondary-fixed-variant": "#53358b",
+                        "on-secondary-container": "#c7aaff",
+                        "on-primary-container": "#330080",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#e0e3e5",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "outline": "#958ea0",
+                        "on-primary": "#3b0091",
+                        "background": "#101415",
+                        "surface-bright": "#363a3b",
+                        "surface-variant": "#323537",
+                        "surface-container-low": "#191c1e",
+                        "surface": "#101415",
+                        "secondary-fixed": "#ebdcff",
+                        "on-tertiary": "#283044",
+                        "on-surface-variant": "#cbc3d7",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#0b0f10",
+                        "surface-container": "#1d2022",
+                        "outline-variant": "#494454",
+                        "primary-fixed-dim": "#d0bcff",
+                        "on-secondary-fixed": "#260059",
+                        "surface-dim": "#101415",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#2d3133",
+                        "surface-container-high": "#272a2c",
+                        "tertiary-container": "#8990a8",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#d3bbff",
+                        "primary": "#d0bcff",
+                        "on-surface": "#e0e3e5",
+                        "secondary-container": "#56378d",
+                        "primary-container": "#9f78ff",
+                        "on-tertiary-container": "#22293d",
+                        "on-primary-fixed-variant": "#5417be",
+                        "on-tertiary-fixed": "#131b2e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "stack-lg": "24px",
+                        "gutter": "32px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "20px",
+                        "stack-md": "16px",
+                        "section-padding": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Manrope"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            transform: translateY(-8px);
+            border-top: 2px solid #d0bcff;
+            background: rgba(30, 41, 59, 0.6);
+            box-shadow: 0 20px 40px -20px rgba(138, 92, 245, 0.15);
+        }
+        .zoom-hover img {
+            transition: transform 0.5s ease;
+        }
+        .zoom-hover:hover img {
+            transform: scale(1.05);
+        }
+        .glow-accent {
+            box-shadow: 0 0 20px rgba(138, 92, 245, 0.1);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 32px;
+        }
+        .hero-mesh {
+            background: radial-gradient(circle at 20% 30%, rgba(138, 92, 245, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(109, 59, 214, 0.1) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-sm h-20 flex items-center">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop w-full">
+<div class="font-headline-md text-headline-md font-bold text-primary">Expervia</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="#">Solutions</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="#">Security</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="#">AI Apps</a>
+<a class="text-on-surface-variant font-body-md hover:text-primary transition-colors duration-200" href="#">About</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-on-surface-variant font-body-md hover:text-primary transition-all hover:scale-105 active:scale-95">Talk to Us</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-body-md font-semibold transition-all hover:scale-105 active:scale-95">Get Started</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-40 pb-section-padding hero-mesh overflow-hidden">
+
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="max-w-4xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-4 block">Industries &amp; Expertise</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6 leading-tight">
+                    Industry-Focused Technology Solutions for a <span class="text-primary">Digital-First World</span>
+</h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant mb-8 max-w-2xl">
+                    Helping Organizations Transform, Innovate, and Grow
+                </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant/80 mb-10 leading-relaxed max-w-3xl">
+                    Every industry faces unique challenges—from strict regulatory requirements to supply chain complexities. Expervia's industry-focused approach ensures that AI, Cloud, and Cybersecurity aren't just buzzwords, but tools leveraged to deliver measurable business outcomes and operational resilience.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-semibold flex items-center gap-2 hover:brightness-110 transition-all transform hover:-translate-y-1">
+                        Explore Solutions <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Industries Grid -->
+<section class="py-section-padding bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Transforming Your Sector</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We bring deep domain expertise to help you navigate specific digital transitions within your industry landscape.</p>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container p-2 px-4 border border-white/5 rounded-full">
+                    10 CORE SPECIALIZATIONS
+                </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Industry 1: Financial Services -->
+<div class="glass-card p-8 rounded-xl flex flex-col h-full">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">account_balance</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Financial Services</h3>
+<p class="font-label-sm text-label-sm text-secondary mb-4">Building the Future of Digital Finance</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                        Modernizing legacy banking cores and enabling secure, real-time transaction processing with AI-driven fraud detection and regulatory compliance automation.
+                    </p>
+<div class="space-y-4 pt-4 border-t border-white/5">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">SOLUTIONS INCLUDE</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">SECURE CLOUD</span>
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">AI FRAUD DETECTION</span>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">OUTCOMES</span>
+<p class="text-primary font-body-md font-medium">Compliance &amp; Trust</p>
+</div>
+</div>
+</div>
+<!-- Industry 2: Government -->
+<div class="glass-card p-8 rounded-xl flex flex-col h-full">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">assured_workload</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Government &amp; Public Sector</h3>
+<p class="font-label-sm text-label-sm text-secondary mb-4">Enabling Digital Government</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                        Accelerating citizen-centric services through secure cloud migration and data sovereignty solutions that prioritize privacy and accessibility.
+                    </p>
+<div class="space-y-4 pt-4 border-t border-white/5">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">SOLUTIONS INCLUDE</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">CITIZEN PORTALS</span>
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">SECURE DATA</span>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">OUTCOMES</span>
+<p class="text-primary font-body-md font-medium">Efficiency &amp; Accessibility</p>
+</div>
+</div>
+</div>
+<!-- Industry 3: Healthcare -->
+<div class="glass-card p-8 rounded-xl flex flex-col h-full">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">medical_services</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Healthcare</h3>
+<p class="font-label-sm text-label-sm text-secondary mb-4">Driving Better Healthcare Through Tech</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                        Empowering providers with interoperable data systems and AI-powered diagnostic support while maintaining the highest levels of patient data security.
+                    </p>
+<div class="space-y-4 pt-4 border-t border-white/5">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">SOLUTIONS INCLUDE</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">TELEHEALTH</span>
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">HISP COMPLIANCE</span>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">OUTCOMES</span>
+<p class="text-primary font-body-md font-medium">Patient Outcomes</p>
+</div>
+</div>
+</div>
+<!-- Industry 4: Education -->
+<div class="glass-card p-8 rounded-xl flex flex-col h-full">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">school</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Education</h3>
+<p class="font-label-sm text-label-sm text-secondary mb-4">Empowering Learning in the Digital Age</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                        Creating modern hybrid learning environments with scalable infrastructure and AI-driven personalized learning paths for students and faculty.
+                    </p>
+<div class="space-y-4 pt-4 border-t border-white/5">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">SOLUTIONS INCLUDE</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">LMS INTEGRATION</span>
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">VIRTUAL LABS</span>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">OUTCOMES</span>
+<p class="text-primary font-body-md font-medium">Global Engagement</p>
+</div>
+</div>
+</div>
+<!-- Industry 5: Telecom -->
+<div class="glass-card p-8 rounded-xl flex flex-col h-full">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">settings_input_antenna</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Telecommunications</h3>
+<p class="font-label-sm text-label-sm text-secondary mb-4">Enabling Connectivity and Innovation</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                        Optimizing network operations through edge computing and AI-powered predictive maintenance, ensuring high-speed connectivity and lower churn.
+                    </p>
+<div class="space-y-4 pt-4 border-t border-white/5">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">SOLUTIONS INCLUDE</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">5G OPTIMIZATION</span>
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">IOT MESH</span>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">OUTCOMES</span>
+<p class="text-primary font-body-md font-medium">Network Resilience</p>
+</div>
+</div>
+</div>
+<!-- Industry 6: Manufacturing -->
+<div class="glass-card p-8 rounded-xl flex flex-col h-full">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">precision_manufacturing</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Manufacturing</h3>
+<p class="font-label-sm text-label-sm text-secondary mb-4">Intelligent Manufacturing for the Future</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                        Implementing Industry 4.0 standards with digital twins and real-time shop floor visibility to reduce waste and maximize throughput.
+                    </p>
+<div class="space-y-4 pt-4 border-t border-white/5">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">SOLUTIONS INCLUDE</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">SMART FACTORY</span>
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">SUPPLY CHAIN</span>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">OUTCOMES</span>
+<p class="text-primary font-body-md font-medium">Operational Speed</p>
+</div>
+</div>
+</div>
+<!-- Industry 7: Energy -->
+<div class="glass-card p-8 rounded-xl flex flex-col h-full">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">bolt</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Energy &amp; Utilities</h3>
+<p class="font-label-sm text-label-sm text-secondary mb-4">Powering Smarter Operations</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                        Managing smart grids and distributed energy resources with data analytics that optimize consumption patterns and grid stability.
+                    </p>
+<div class="space-y-4 pt-4 border-t border-white/5">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">SOLUTIONS INCLUDE</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">GRID ANALYTICS</span>
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">RENEWABLES AI</span>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">OUTCOMES</span>
+<p class="text-primary font-body-md font-medium">Sustainability</p>
+</div>
+</div>
+</div>
+<!-- Industry 8: Retail -->
+<div class="glass-card p-8 rounded-xl flex flex-col h-full">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">shopping_bag</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Retail &amp; Commerce</h3>
+<p class="font-label-sm text-label-sm text-secondary mb-4">Transforming Customer Experiences</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                        Unifying physical and digital storefronts with omnichannel commerce platforms and hyper-personalized customer engagement engines.
+                    </p>
+<div class="space-y-4 pt-4 border-t border-white/5">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">SOLUTIONS INCLUDE</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">OMNICHANNEL</span>
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">AI INVENTORY</span>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">OUTCOMES</span>
+<p class="text-primary font-body-md font-medium">Customer Loyalty</p>
+</div>
+</div>
+</div>
+<!-- Industry 9: Professional Services -->
+<div class="glass-card p-8 rounded-xl flex flex-col h-full">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">business_center</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Professional Services</h3>
+<p class="font-label-sm text-label-sm text-secondary mb-4">Modernizing Service Delivery</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                        Optimizing billable utilization and project delivery with integrated cloud collaboration tools and automated business processes.
+                    </p>
+<div class="space-y-4 pt-4 border-t border-white/5">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">SOLUTIONS INCLUDE</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">CLOUD ERP</span>
+<span class="bg-surface-container-high px-2 py-1 rounded text-[10px] font-bold text-on-surface-variant">SECURE DOCS</span>
+</div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface/60 block mb-2">OUTCOMES</span>
+<p class="text-primary font-body-md font-medium">Profitability</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cross-Industry Expertise Section -->
+<section class="py-section-padding bg-background relative overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Core Transformation Priorities</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Expertise that spans sectors to deliver universal value across the enterprise landscape.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+<div class="flex flex-col items-center text-center p-6 bg-surface-container rounded-xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">psychology</span>
+<span class="font-body-md text-body-md text-on-surface">AI &amp; Intelligence</span>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-surface-container rounded-xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">cloud_sync</span>
+<span class="font-body-md text-body-md text-on-surface">Cloud Transformation</span>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-surface-container rounded-xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">verified_user</span>
+<span class="font-body-md text-body-md text-on-surface">Cybersecurity</span>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-surface-container rounded-xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">monitoring</span>
+<span class="font-body-md text-body-md text-on-surface">Data &amp; Analytics</span>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-surface-container rounded-xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">rocket_launch</span>
+<span class="font-body-md text-body-md text-on-surface">Digital Evolution</span>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-surface-container rounded-xl hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">window</span>
+<span class="font-body-md text-body-md text-on-surface">Microsoft Solutions</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Expervia -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="zoom-hover rounded-2xl overflow-hidden relative group">
+<img class="w-full aspect-square object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A professional, modern server room corridor with sleek dark racks, neon purple indicator lights glowing softly. Cinematic lighting highlights the precision and security of the infrastructure. The overall style is high-end enterprise SaaS, minimal and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLWc7OeoNQxh6dsQH3Ot35pytdP5YMUqcFoRkOP05TuYRoXRAZaJogVViHv8ba_CyGAquNVFZe7Ds46Ma3wcsDOr4UKix9-2bNtBuIwWPqf7nYfBUNLc_PqdCcasH8UUwd2LFu8bA1xT7BSZVOTVg6Vnq7gTztw1ta-_qMuogdIvmY58uWo8mKt5ssUHpep3YmVY4aXqPYzlom3TACyaQNIECuH7FNEq2R_nCFTeZj4j7vesN7NcPDN5otW2AueqfR1lpbjdxXroIA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Why Global Leaders <br/><span class="text-primary">Choose Expervia</span></h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg h-fit">verified</span>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-1">Microsoft AI Cloud Partner</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Expertise in the full Microsoft stack, from Azure to M365 and specialized AI integrations.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg h-fit">hub</span>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-1">Strategic Partnerships</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Global CSP and Huawei Enterprise Partner, offering a diverse and resilient technology ecosystem.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg h-fit">shield_person</span>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-1">Security-First Methodology</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Every solution we deploy is built on a foundation of Zero-Trust and proactive risk management.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Closing CTA Section -->
+<section class="py-section-padding bg-background relative overflow-hidden">
+
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="glass-card p-12 md:p-20 rounded-3xl text-center flex flex-col items-center">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Building the Intelligent Enterprise Across Every Industry</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl">
+                    Technology is reshaping every sector. Partner with Expervia to lead your industry's digital evolution.
+                </p>
+<div class="flex flex-col md:flex-row gap-6 w-full md:w-auto">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-lg font-bold text-lg hover:brightness-110 transition-all glow-accent">
+                        Book an Industry Consultation
+                    </button>
+<button class="bg-surface-container-highest text-on-surface px-10 py-5 rounded-lg font-bold text-lg hover:bg-surface-container transition-all">
+                        Speak with an Expert
+                    </button>
+</div>
+<button class="mt-8 text-on-surface-variant font-label-sm uppercase tracking-widest hover:text-primary transition-colors">
+                    Request an Assessment
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-white/5 pt-section-padding pb-10">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-20">
+<div class="md:col-span-4">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-6">Expervia</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mb-8">
+                        Global leader in enterprise-grade AI, Cloud, and Security solutions. Empowering industries to build the digital future.
+                    </p>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-sm text-label-sm text-primary uppercase mb-6">Solutions</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">AI &amp; ML</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Cybersecurity</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Cloud Infra</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-sm text-label-sm text-primary uppercase mb-6">Industries</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Finance</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Healthcare</a></li>
+<li><a class="text-on-surface-variant hover:text-white transition-colors" href="#">Manufacturing</a></li>
+</ul>
+</div>
+<div class="md:col-span-4">
+<h5 class="font-label-sm text-label-sm text-primary uppercase mb-6">Newsletter</h5>
+<div class="flex gap-2">
+<input class="bg-surface-container-high border-none rounded-lg flex-grow focus:ring-2 focus:ring-primary text-on-surface" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary px-4 rounded-lg"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
+                    © 2024 Expervia Technologies. All rights reserved. Microsoft AI Cloud Partner | CSP | Huawei Partner.
+                </p>
+<div class="flex gap-8">
+<a class="text-on-surface-variant font-body-md hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-body-md hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="text-on-surface-variant font-body-md hover:text-white transition-colors" href="#">Security Compliance</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.glass-card').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

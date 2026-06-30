@@ -1,0 +1,482 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact Us | Expervia Technologies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#bec6e0",
+                        "secondary": "#d3bbff",
+                        "surface-tint": "#d0bcff",
+                        "on-primary-fixed": "#23005c",
+                        "surface-container-highest": "#323537",
+                        "on-secondary": "#3c1b73",
+                        "inverse-primary": "#6d3bd6",
+                        "on-background": "#e0e3e5",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "outline": "#958ea0",
+                        "inverse-surface": "#e0e3e5",
+                        "on-primary": "#3b0091",
+                        "primary-fixed": "#e9ddff",
+                        "tertiary-fixed": "#dae2fd",
+                        "on-secondary-fixed-variant": "#53358b",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "on-secondary-container": "#c7aaff",
+                        "on-primary-container": "#330080",
+                        "surface-container-lowest": "#0b0f10",
+                        "on-tertiary": "#283044",
+                        "on-surface-variant": "#cbc3d7",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#d0bcff",
+                        "on-secondary-fixed": "#260059",
+                        "surface-container": "#1d2022",
+                        "outline-variant": "#494454",
+                        "background": "#101415",
+                        "surface-bright": "#363a3b",
+                        "surface": "#101415",
+                        "secondary-fixed": "#ebdcff",
+                        "surface-variant": "#323537",
+                        "surface-container-low": "#191c1e",
+                        "secondary-container": "#56378d",
+                        "on-tertiary-container": "#22293d",
+                        "primary-container": "#9f78ff",
+                        "on-tertiary-fixed": "#131b2e",
+                        "on-primary-fixed-variant": "#5417be",
+                        "surface-dim": "#101415",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#272a2c",
+                        "inverse-on-surface": "#2d3133",
+                        "secondary-fixed-dim": "#d3bbff",
+                        "primary": "#d0bcff",
+                        "on-surface": "#e0e3e5",
+                        "tertiary-container": "#8990a8",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "stack-lg": "24px",
+                        "gutter": "32px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "20px",
+                        "stack-md": "16px",
+                        "section-padding": "120px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Manrope"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Manrope"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "display-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .primary-glow:hover {
+            box-shadow: 0 0 25px 0 rgba(138, 92, 245, 0.25);
+        }
+        .zoom-hover:hover img {
+            transform: scale(1.05);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+        .accordion-item.active .icon-rotate {
+            transform: rotate(180deg);
+        }
+        body {
+            background-color: #101415;
+            color: #e0e3e5;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full bg-surface/60 backdrop-blur-xl border-b border-white/10 z-50 shadow-sm transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">Expervia</div>
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Solutions</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Security</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">AI Apps</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">About</a>
+<a class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold hover:opacity-80 transition-all" href="#">Get Started</a>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-40 pb-section-padding overflow-hidden">
+
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="max-w-3xl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-4 block">Get In Touch</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6 leading-tight">Let's Build the Future Together</h1>
+<h2 class="font-headline-md text-headline-md text-secondary mb-8">Transform Your Business with AI, Cloud, Cybersecurity &amp; Digital Innovation</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                    Every successful transformation begins with a conversation. At Expervia Technologies, we partner with governments, enterprises, and healthcare organizations to solve complex challenges.
+                </p>
+</div>
+</div>
+</section>
+<!-- Contact Information Grid -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- General Enquiries -->
+<div class="glass-card p-8 rounded-xl border-t-2 border-primary group hover:bg-surface-container transition-all">
+<div class="mb-6 bg-primary/10 w-12 h-12 flex items-center justify-center rounded-lg text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">General Enquiries</h3>
+<p class="text-on-surface-variant mb-4">For information about our services, partnerships, solutions, events, or community initiatives.</p>
+<a class="text-primary font-bold hover:underline" href="mailto:info@experviatechnologies.com">info@experviatechnologies.com</a>
+</div>
+<!-- Sales Enquiries -->
+<div class="glass-card p-8 rounded-xl border-t-2 border-primary group hover:bg-surface-container transition-all">
+<div class="mb-6 bg-primary/10 w-12 h-12 flex items-center justify-center rounded-lg text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">monetization_on</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">Sales Enquiries</h3>
+<p class="text-on-surface-variant mb-4">Speak with our consultants about Artificial Intelligence, Cloud Services, Cybersecurity, Microsoft Solutions, Huawei Solutions, Managed Services, and Digital Transformation projects.</p>
+<a class="text-primary font-bold hover:underline" href="mailto:sales@experviatechnologies.com">sales@experviatechnologies.com</a>
+</div>
+<!-- Partnership -->
+<div class="glass-card p-8 rounded-xl border-t-2 border-primary group hover:bg-surface-container transition-all">
+<div class="mb-6 bg-primary/10 w-12 h-12 flex items-center justify-center rounded-lg text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">handshake</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">Partnerships</h3>
+<p class="text-on-surface-variant mb-4">Interested in strategic partnerships, technology alliances, channel relationships, or ecosystem collaborations? We'd love to hear from you.</p>
+<a class="text-primary font-bold hover:underline" href="mailto:partnerships@experviatechnologies.com">partnerships@experviatechnologies.com</a>
+</div>
+<!-- Media -->
+<div class="glass-card p-8 rounded-xl border-t-2 border-primary group hover:bg-surface-container transition-all"><div class="mb-6 bg-primary/10 w-12 h-12 flex items-center justify-center rounded-lg text-primary group-hover:scale-110 transition-transform"><span class="material-symbols-outlined">support_agent</span></div><h3 class="font-headline-md text-headline-md mb-4 text-on-surface">Support</h3><p class="text-on-surface-variant mb-4">For interviews, speaking engagements, media enquiries, press releases, and corporate communications.</p><a class="text-primary font-bold hover:underline" href="mailto:support@experviatechnologies.com">support@experviatechnologies.com</a></div>
+</div>
+<!-- Head Office Details -->
+<div class="mt-gutter grid grid-cols-1 md:grid-cols-2 gap-gutter items-center glass-card p-10 rounded-xl">
+<div>
+<h3 class="font-headline-md text-headline-md mb-6 text-on-surface">Global Head Office</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div><p class="text-on-surface font-bold">Plot 21A Olubunmi Rotimi Street</p><p class="text-on-surface-variant">Off Abike Sulaiman Street Lekki Phase 1 Lagos 106104 Lagos, Nigeria</p></div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">call</span>
+<div><p class="text-on-surface font-bold">For information about our services, partnerships, solutions, events, or community initiatives.</p><p class="text-on-surface-variant">For information about our services, partnerships, solutions, events, or community initiatives.</p><p class="text-on-surface-variant">For information about our services, partnerships, solutions, events, or community initiatives.</p></div>
+</div>
+<div class="flex items-start gap-4"><span class="material-symbols-outlined text-primary">language</span><div><p class="text-on-surface font-bold">For information about our services, partnerships, solutions, events, or community initiatives.</p><p class="text-on-surface-variant">For information about our services, partnerships, solutions, events, or community initiatives.</p></div></div></div>
+</div>
+<div class="rounded-xl overflow-hidden grayscale contrast-125 brightness-75 hover:grayscale-0 transition-all duration-700 h-64 md:h-full">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, high-resolution aerial view of a modern skyscraper in Lagos, Nigeria at sunset. The architectural details are sharp with glass reflecting the deep purple and indigo hues of the twilight sky. The lighting is professional and authoritative, evoking a sense of corporate power and technological advancement." data-location="Lagos" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTnOgvJo9RUhRlztEq0meJhUgQFoqE8lb2KZ9DigTFBZdrSELdl_QCjM5_BuZDluhx3XIH5LjjwSFc4KYgFDg8itxH5VflhTNksPgR5xc2RzTl7yVOXEdMzE10kHLIfH8MFxpcxvF2MmP3OL81Xh_cYom6cN36vm6dCAwTxLjzYrvNSrf7tI3XvMuhjmNkuDVaAohwJED5cw6ZCNJPaDOV_A3-0VlqD7EBHcsI5nbmln0DFVLCpgdX7sLI-iRDV-yBsCMwTzMlvo6A')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Contact Form & Consultation Section -->
+<section class="py-section-padding">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Strategic Consultation -->
+<div class="lg:col-span-5">
+<div class="sticky top-32">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Strategic Consultation</h2>
+<p class="text-body-lg text-on-surface-variant mb-10">Select your area of strategic focus for a dedicated advisory session with our specialists.</p>
+<div class="space-y-4">
+<div class="flex items-center p-4 glass-card rounded-lg hover:border-primary transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-primary mr-4" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span class="text-on-surface font-bold">AI &amp; Automation Advisory</span>
+</div>
+<div class="flex items-center p-4 glass-card rounded-lg hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary mr-4" style="font-variation-settings: 'FILL' 1;">cloud</span>
+<span class="text-on-surface font-bold">Cloud Infrastructure (Azure/AWS)</span>
+</div>
+<div class="flex items-center p-4 glass-card rounded-lg hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary mr-4" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="text-on-surface font-bold">Cybersecurity Governance</span>
+</div>
+<div class="flex items-center p-4 glass-card rounded-lg hover:border-primary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary mr-4" style="font-variation-settings: 'FILL' 1;">dataset</span>
+<span class="text-on-surface font-bold">Microsoft Copilot Readiness</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Form -->
+<div class="lg:col-span-7 bg-surface-container-high p-8 md:p-12 rounded-2xl shadow-xl">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-8">Tell Us About Your Project</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Full Name</label>
+<input class="w-full bg-surface border-outline-variant focus:border-primary rounded-lg p-4 text-on-surface transition-all outline-none" placeholder="John Doe" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Business Email</label>
+<input class="w-full bg-surface border-outline-variant focus:border-primary rounded-lg p-4 text-on-surface transition-all outline-none" placeholder="john@company.com" type="email">
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Organization</label>
+<input class="w-full bg-surface border-outline-variant focus:border-primary rounded-lg p-4 text-on-surface transition-all outline-none" placeholder="Company Name" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Job Title</label>
+<input class="w-full bg-surface border-outline-variant focus:border-primary rounded-lg p-4 text-on-surface transition-all outline-none" placeholder="CTO / Director" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Industry</label>
+<select class="w-full bg-surface border-outline-variant focus:border-primary rounded-lg p-4 text-on-surface transition-all outline-none">
+<option>Healthcare</option>
+<option>Financial Services</option>
+<option>Government</option>
+<option>Energy &amp; Utilities</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Service of Interest</label>
+<select class="w-full bg-surface border-outline-variant focus:border-primary rounded-lg p-4 text-on-surface transition-all outline-none">
+<option>AI Implementation</option>
+<option>Cloud Migration</option>
+<option>Cybersecurity Audit</option>
+<option>Microsoft Licensing</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Project Budget</label>
+<select class="w-full bg-surface border-outline-variant focus:border-primary rounded-lg p-4 text-on-surface transition-all outline-none">
+<option>$50k - $100k</option>
+<option>$100k - $500k</option>
+<option>$500k+</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Timeline</label>
+<select class="w-full bg-surface border-outline-variant focus:border-primary rounded-lg p-4 text-on-surface transition-all outline-none">
+<option>Immediately</option>
+<option>3-6 Months</option>
+<option>6+ Months</option>
+</select>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Your Message</label>
+<textarea class="w-full bg-surface border-outline-variant focus:border-primary rounded-lg p-4 text-on-surface transition-all outline-none" placeholder="Describe your challenge or goal..." rows="4"></textarea>
+</div>
+<div class="md:col-span-2 pt-4">
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold text-headline-md primary-glow transition-all" type="submit">Submit Request</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Assessments Section -->
+<section class="py-section-padding bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Request a Complimentary Assessment</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Evaluate your current posture and readiness for future-scale technologies with our expert-led diagnostics.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- AI Readiness -->
+<div class="group glass-card p-8 rounded-xl hover:translate-y-[-8px] transition-all duration-300">
+<h4 class="font-headline-md text-headline-md mb-4 text-on-surface">AI Readiness</h4>
+<p class="text-on-surface-variant mb-6">Analyze your data architecture and governance to identify AI deployment opportunities.</p>
+<button class="flex items-center text-primary font-bold hover:gap-3 transition-all">Request Assessment <span class="material-symbols-outlined ml-2">arrow_forward</span></button>
+</div>
+<!-- Cloud Readiness -->
+<div class="group glass-card p-8 rounded-xl hover:translate-y-[-8px] transition-all duration-300">
+<h4 class="font-headline-md text-headline-md mb-4 text-on-surface">Cloud Readiness</h4>
+<p class="text-on-surface-variant mb-6">Review legacy infrastructure for optimization and seamless hybrid-cloud migration.</p>
+<button class="flex items-center text-primary font-bold hover:gap-3 transition-all">Request Assessment <span class="material-symbols-outlined ml-2">arrow_forward</span></button>
+</div>
+<!-- Cybersecurity Risk -->
+<div class="group glass-card p-8 rounded-xl hover:translate-y-[-8px] transition-all duration-300">
+<h4 class="font-headline-md text-headline-md mb-4 text-on-surface">Cybersecurity Risk</h4>
+<p class="text-on-surface-variant mb-6">A deep dive into your vulnerability landscape and incident response capabilities.</p>
+<button class="flex items-center text-primary font-bold hover:gap-3 transition-all">Request Assessment <span class="material-symbols-outlined ml-2">arrow_forward</span></button>
+</div>
+<!-- Digital Maturity -->
+<div class="group glass-card p-8 rounded-xl hover:translate-y-[-8px] transition-all duration-300">
+<h4 class="font-headline-md text-headline-md mb-4 text-on-surface">Digital Maturity</h4>
+<p class="text-on-surface-variant mb-6">Benchmarking your organization against industry-leading digital transformation models.</p>
+<button class="flex items-center text-primary font-bold hover:gap-3 transition-all">Request Assessment <span class="material-symbols-outlined ml-2">arrow_forward</span></button>
+</div>
+<!-- Microsoft Copilot -->
+<div class="group glass-card p-8 rounded-xl hover:translate-y-[-8px] transition-all duration-300 lg:col-span-2">
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div>
+<h4 class="font-headline-md text-headline-md mb-4 text-on-surface">Microsoft Copilot Readiness</h4>
+<p class="text-on-surface-variant mb-6">Ensure your tenant is secure and your data is properly permissioned for GenAI adoption.</p>
+<button class="flex items-center text-primary font-bold hover:gap-3 transition-all">Request Assessment <span class="material-symbols-outlined ml-2">arrow_forward</span></button>
+</div>
+<div class="w-full md:w-1/2 h-32 rounded-lg overflow-hidden bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-6xl">verified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-padding bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col lg:flex-row gap-16">
+<div class="lg:w-1/3">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Frequently Asked Questions</h2>
+<p class="text-on-surface-variant">Finding answers to common queries regarding our engagement models and services.</p>
+</div>
+<div class="lg:w-2/3 space-y-4">
+<!-- FAQ 1 -->
+<div class="accordion-item glass-card rounded-xl overflow-hidden active" onclick="this.classList.toggle('active')"><div class="p-6 flex justify-between items-center cursor-pointer"><span class="font-headline-md text-on-surface">What industries does Expervia serve?</span><span class="material-symbols-outlined icon-rotate text-primary">expand_more</span></div><div class="accordion-content"><div class="p-6 pt-0 text-on-surface-variant border-t border-white/5">Expervia Technologies specializes in serving complex, high-compliance sectors including Government Agencies, Financial Institutions, Healthcare Providers, Large-Scale Utilities, Retail, and Professional Services across Africa and beyond.</div></div></div>
+<!-- FAQ 2 -->
+<div class="accordion-item glass-card rounded-xl overflow-hidden" onclick="this.classList.toggle('active')">
+<div class="p-6 flex justify-between items-center cursor-pointer">
+<span class="font-headline-md text-on-surface">How does your Microsoft Licensing (CSP) work?</span>
+<span class="material-symbols-outlined icon-rotate text-primary">expand_more</span>
+</div>
+<div class="accordion-content">
+<div class="p-6 pt-0 text-on-surface-variant border-t border-white/5">
+                                As a Tier 1 Microsoft Cloud Solution Provider, we offer flexible monthly or annual billing, centralized license management, and expert technical support to optimize your Microsoft 365 and Azure investment.
+                            </div>
+</div>
+</div>
+<!-- FAQ 3 -->
+<div class="accordion-item glass-card rounded-xl overflow-hidden" onclick="this.classList.toggle('active')">
+<div class="p-6 flex justify-between items-center cursor-pointer">
+<span class="font-headline-md text-on-surface">What is the typical engagement process?</span>
+<span class="material-symbols-outlined icon-rotate text-primary">expand_more</span>
+</div>
+<div class="accordion-content">
+<div class="p-6 pt-0 text-on-surface-variant border-t border-white/5">
+                                Our process begins with a Discovery Session, followed by a detailed Maturity Assessment. From there, we develop a strategic roadmap and move into Proof of Concept (PoC) before full-scale implementation.
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community CTA -->
+<section class="py-section-padding px-margin-desktop">
+<div class="max-w-container-max mx-auto glass-card rounded-3xl overflow-hidden relative group">
+<div class="absolute inset-0 bg-cover bg-center opacity-20 transition-all duration-700 group-hover:scale-105" data-alt="A dark, moody cinematic image of a high-tech conference room where professional people are gathered around a glowing holographic projection of a data network. The scene is lit by deep purple and cool blue lights, reflecting on the glass surfaces of the modern interior. The atmosphere is intellectual, collaborative, and future-oriented." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDfJ7_ooaFLi0hUtCwbr6X-nWgkGIPdfqqhXfVeHgMyjF9q5sACnJ2O69GAhpHxf5EqvwnXgsnZEQzH64LO0BQ8mddsZOoamN9uCExmpswXxOcW_MquW3xCeIx0C5c3y0PJPPdSYmPTqwT0zWe9YVp7xOx5zB4kzuw5KSUHePhDkDP8yITjJ_Ki-JuBjBkSZ3j7VxIUGkn9oFvtsEwWTivl8P7Tdtg2762ZHgcrIX8Mf-b5DmCWD__pPsxPDS6Jj88ee0xFxEYaung')"></div>
+<div class="relative z-10 p-12 lg:p-20 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Join the Expervia AI &amp; Cloud Community</h2>
+<ul class="space-y-4"><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span class="text-on-surface">Technical Webinars</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span class="text-on-surface">Industry Insights</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span class="text-on-surface">Microsoft AI &amp; Azure Updates</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span class="text-on-surface">Career Development</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span class="text-on-surface">Networking Opportunities</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span class="text-on-surface">Technology Events</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span class="text-on-surface">Learning Resources</span></li><li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check_circle</span><span class="text-on-surface">Collaboration Opportunities</span></li></ul>
+</div>
+<div>
+<button class="bg-primary text-on-primary px-10 py-5 rounded-full font-bold text-headline-md primary-glow hover:scale-105 transition-all">Join the Community</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-section-padding text-center">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<h2 class="font-display-lg text-display-lg text-on-surface mb-8">Ready to Start Your Transformation Journey?</h2>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold hover:opacity-90 transition-all">Book a Consultation</button>
+<button class="border border-primary text-primary px-8 py-4 rounded-full font-bold hover:bg-primary/5 transition-all">Request an Assessment</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-white/10">
+<div class="py-section-padding px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div>
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-6">Expervia</div>
+<p class="text-on-surface-variant font-body-md text-body-md">Empowering organizations with world-class digital solutions and strategic technical foresight.</p>
+</div>
+<div>
+<h4 class="text-on-surface font-bold mb-6">Solutions</h4>
+<ul class="space-y-4 text-on-surface-variant">
+<li class=""><a class="hover:text-secondary transition-colors" href="#">AI &amp; Data Analytics</a></li>
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Cloud Transformation</a></li>
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Cybersecurity</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-bold mb-6">Company</h4>
+<ul class="space-y-4 text-on-surface-variant">
+<li class=""><a class="hover:text-secondary transition-colors" href="#">About Us</a></li>
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Partner Portal</a></li>
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Global Compliance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-bold mb-6">Legal</h4>
+<ul class="space-y-4 text-on-surface-variant">
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Privacy Policy</a></li>
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Terms of Service</a></li>
+<li class=""><a class="hover:text-secondary transition-colors" href="#">Security Whitepaper</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 py-8 text-center px-margin-desktop"><p class="text-on-surface-variant font-label-sm uppercase tracking-widest mb-4">Microsoft AI Cloud Partner | Cloud Solution Provider (CSP) | Huawei Enterprise Partner</p>
+<p class="text-on-surface-variant font-body-md text-body-md">© 2024 Expervia Technologies. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-surface/90');
+                nav.classList.add('py-4');
+                nav.classList.remove('h-20');
+            } else {
+                nav.classList.remove('bg-surface/90');
+                nav.classList.remove('py-4');
+                nav.classList.add('h-20');
+            }
+        });
+
+        // Form submission ripple effect (Visual only)
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Your inquiry has been logged. Our strategy team will reach out within 24 hours.');
+        });
+    </script>
+
+
+</body></html>

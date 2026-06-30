@@ -10,19 +10,19 @@ export const siteConfig = {
   url: "https://expervia.com",
   // Primary navigation links, consumed by the Navbar.
   navLinks: [
-    { title: "Solutions", href: "#solutions" },
-    { title: "Industries", href: "#industries" },
-    { title: "Resources", href: "#resources" },
+    { title: "Solutions", href: "/#solutions" },
+    { title: "Industries", href: "/industries" },
+    { title: "Resources", href: "/#resources" },
     { title: "About Us", href: "/about" },
   ],
   // Footer link columns.
   footerNav: {
     company: [
-      { title: "About Us", href: "#about" },
+      { title: "About Us", href: "/about" },
       { title: "Careers", href: "#careers" },
       { title: "Newsroom", href: "#newsroom" },
       { title: "Events", href: "#events" },
-      { title: "Contact", href: "#contact" },
+      { title: "Contact", href: "/contact" },
     ],
     legal: [
       { title: "Privacy Policy", href: "#privacy" },
@@ -32,8 +32,24 @@ export const siteConfig = {
       { title: "Cookie Policy", href: "#cookies" },
     ],
   },
+  // Single source of truth for contact details (used by the Contact page,
+  // footer, etc). NOTE: address differs between the original Stitch exports —
+  // this is the Contact page's "Global Head Office"; confirm it's correct.
   contact: {
-    address: "23 Hogan Bassey, Lakowe Lakes, Lagos.",
+    address:
+      "Plot 21A Olubunmi Rotimi Street, Off Abike Sulaiman Street, Lekki Phase 1, Lagos 106104, Nigeria",
+    // Used to center the embedded map. For an EXACT pin, replace this with
+    // "latitude,longitude" coordinates (right-click the spot in Google Maps →
+    // copy the coords). A text address geocodes to an approximate location.
+    mapQuery: "Plot 21A Olubunmi Rotimi Street, Lekki Phase 1, Lagos, Nigeria",
+    phone: "+234 (0) 1 234 5678",
+    website: "www.experviatechnologies.com",
+    emails: {
+      general: "info@experviatechnologies.com",
+      sales: "sales@experviatechnologies.com",
+      partnerships: "partnerships@experviatechnologies.com",
+      support: "support@experviatechnologies.com",
+    },
   },
 } as const;
 

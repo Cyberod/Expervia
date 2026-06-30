@@ -12,10 +12,10 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  // Route links (e.g. /about) are active on their page; in-page anchor links
-  // (#solutions…) act as the active item on the homepage only.
+  // Homepage-section links (/#solutions…) highlight the first item while on the
+  // homepage; dedicated route links (/about…) highlight on their own page.
   const isActive = (href: string, index: number) =>
-    href.startsWith("/") ? pathname === href : pathname === "/" && index === 0;
+    href.includes("#") ? pathname === "/" && index === 0 : pathname === href;
 
   return (
     <nav className="bg-surface/60 fixed top-0 z-50 w-full border-b border-white/10 shadow-sm backdrop-blur-xl">
@@ -47,11 +47,12 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <Button
+            asChild
             variant="brand"
             size="pill-sm"
             className="hidden md:inline-flex"
           >
-            Book a Consultation
+            <Link href="/contact">Book a Consultation</Link>
           </Button>
 
           {/* Mobile menu toggle */}
@@ -81,8 +82,15 @@ export function Navbar() {
                 {link.title}
               </Link>
             ))}
-            <Button variant="brand" size="pill-sm" className="mt-2 w-full">
-              Book a Consultation
+            <Button
+              asChild
+              variant="brand"
+              size="pill-sm"
+              className="mt-2 w-full"
+            >
+              <Link href="/contact" onClick={() => setOpen(false)}>
+                Book a Consultation
+              </Link>
             </Button>
           </div>
         </div>
