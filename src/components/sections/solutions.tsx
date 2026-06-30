@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   BrainCircuit,
   CloudCheck,
@@ -12,12 +13,21 @@ import {
 import { Container } from "@/components/shared/container";
 import { SectionLabel } from "@/components/shared/section-label";
 
-const solutions: { icon: LucideIcon; title: string; description: string }[] = [
+type Solution = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  href?: string;
+};
+
+// `href` links a solution to its dedicated page (added as each page is built).
+const solutions: Solution[] = [
   {
     icon: BrainCircuit,
     title: "Artificial Intelligence",
     description:
       "Harnessing generative and predictive AI to drive enterprise efficiency and innovation.",
+    href: "/solutions/ai",
   },
   {
     icon: CloudCheck,
@@ -48,6 +58,7 @@ const solutions: { icon: LucideIcon; title: string; description: string }[] = [
     title: "Microsoft Solutions",
     description:
       "Specialized implementation of Microsoft 365, Dynamics, and Power Platform ecosystems.",
+    href: "/solutions/microsoft",
   },
   {
     icon: Headset,
@@ -77,20 +88,30 @@ export function Solutions() {
           </h2>
         </div>
         <div className="gap-gutter grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-          {solutions.map(({ icon: Icon, title, description }) => (
-            <div
-              key={title}
-              className="glass-panel hover-lift border-t-primary/40 group rounded-xl border-t-2 p-8"
-            >
-              <div className="bg-primary/10 group-hover:bg-primary/20 mb-6 flex size-12 items-center justify-center rounded-lg transition-colors">
-                <Icon className="text-primary size-6" />
+          {solutions.map(({ icon: Icon, title, description, href }) => {
+            const className =
+              "glass-panel hover-lift border-t-primary/40 group block rounded-xl border-t-2 p-8";
+            const content = (
+              <>
+                <div className="bg-primary/10 group-hover:bg-primary/20 mb-6 flex size-12 items-center justify-center rounded-lg transition-colors">
+                  <Icon className="text-primary size-6" />
+                </div>
+                <h3 className="font-display text-on-surface text-headline-md mb-3 font-semibold">
+                  {title}
+                </h3>
+                <p className="text-on-surface-variant text-sm">{description}</p>
+              </>
+            );
+            return href ? (
+              <Link key={title} href={href} className={className}>
+                {content}
+              </Link>
+            ) : (
+              <div key={title} className={className}>
+                {content}
               </div>
-              <h3 className="font-display text-on-surface text-headline-md mb-3 font-semibold">
-                {title}
-              </h3>
-              <p className="text-on-surface-variant text-sm">{description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </Container>
     </section>

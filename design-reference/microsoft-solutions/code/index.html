@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Microsoft Solutions | Expervia Technologies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#323537",
+                        "on-secondary-fixed": "#260059",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "primary-fixed-dim": "#d0bcff",
+                        "on-surface-variant": "#cbc3d7",
+                        "on-background": "#e0e3e5",
+                        "primary": "#d0bcff",
+                        "tertiary": "#bec6e0",
+                        "surface-dim": "#101415",
+                        "on-primary-fixed-variant": "#5417be",
+                        "inverse-on-surface": "#2d3133",
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#323537",
+                        "tertiary-container": "#8990a8",
+                        "tertiary-fixed": "#dae2fd",
+                        "on-tertiary-container": "#22293d",
+                        "on-secondary-container": "#c7aaff",
+                        "on-secondary": "#3c1b73",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#ebdcff",
+                        "primary-container": "#9f78ff",
+                        "on-primary": "#3b0091",
+                        "surface-container": "#1d2022",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#330080",
+                        "inverse-primary": "#6d3bd6",
+                        "on-surface": "#e0e3e5",
+                        "surface-container-low": "#191c1e",
+                        "background": "#101415",
+                        "inverse-surface": "#e0e3e5",
+                        "primary-fixed": "#e9ddff",
+                        "on-secondary-fixed-variant": "#53358b",
+                        "surface-bright": "#363a3b",
+                        "surface": "#101415",
+                        "secondary-fixed-dim": "#d3bbff",
+                        "on-error": "#690005",
+                        "secondary": "#d3bbff",
+                        "surface-container-high": "#272a2c",
+                        "secondary-container": "#56378d",
+                        "on-primary-fixed": "#23005c",
+                        "outline-variant": "#494454",
+                        "surface-container-lowest": "#0b0f10",
+                        "outline": "#958ea0",
+                        "on-tertiary-fixed": "#131b2e",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "on-tertiary": "#283044",
+                        "surface-tint": "#d0bcff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding": "120px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "stack-md": "16px",
+                        "gutter": "32px",
+                        "stack-sm": "8px",
+                        "stack-lg": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #101415; color: #e0e3e5; -webkit-font-smoothing: antialiased; }
+        .glass-panel { backdrop-filter: blur(12px); background: rgba(30, 41, 59, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .gradient-text { background: linear-gradient(135deg, #d0bcff 0%, #9f78ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .bento-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .bento-card:hover { transform: translateY(-4px); border-color: #d0bcff; box-shadow: 0 20px 40px -15px rgba(138, 92, 245, 0.15); }
+        .image-zoom:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-sm">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-20">
+<div class="font-headline-md text-headline-md font-bold text-primary">Expervia</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Solutions</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Security</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">AI Apps</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="#">Insights</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-bold hover:brightness-110 active:scale-95 transition-all">
+                Talk to Us
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-end technical data center corridor with symmetrical server racks. The lighting is deep blue and purple with glowing LED indicators. In the distance, a holographic cloud icon floats within a circular glowing ring. Wisps of technological vapor or atmospheric lighting effects create a sense of depth and intelligence. The aesthetic is extremely sharp, professional, and futuristic, representing modern cloud infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwyYdP_QA-ORpx39k3h-G1QJon6qsRYrUSSBx_3tyHad6arHMGQ_r6i5J0zjCiuHQHOXxAxfjftATorGi-3JJxDt4ONhwyJqXWEXgytve3PvXJUsJgrVoO21JtP1yIRUG_FwSsmzsivW0fuk88s7lB5QpT-tZvyi6lacf9I4TPaLtUMG_pC5XG6jW-PbhCYS9TNA8q--ZB6GifibCyjCU1nAnor04h1mARidzXwb9t6PLm51HLy9tsVBWXA4Bk_ZdVFsl_xRLyrEzg"/>
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-margin-desktop w-full grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="space-y-stack-lg">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                        Microsoft AI Cloud Partner
+                    </div>
+<h1 class="font-display-lg text-display-lg leading-[1.1]">
+                        Accelerate <span class="gradient-text">Innovation</span> with Microsoft Technologies
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        AI. Cloud. Security. Productivity. Transformation. As a Microsoft AI Cloud Partner and CSP, Expervia helps organizations modernize securely and intelligently.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-stack-md pt-stack-md">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold text-lg hover:brightness-110 hover:-translate-y-0.5 transition-all">
+                            Speak with a Specialist
+                        </button>
+<button class="border border-primary text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary/5 transition-all">
+                            Book a Consultation
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Partner Trust Bar -->
+<section class="py-12 border-y border-white/5 bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-wrap justify-center items-center gap-20 opacity-70">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-4xl">cloud_done</span>
+<div>
+<div class="font-bold text-on-surface leading-tight">Microsoft AI Cloud Partner</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest font-label-sm">Certified Excellence</div>
+</div>
+</div>
+<div class="flex items-center gap-3 border-l border-white/10 pl-20">
+<span class="material-symbols-outlined text-primary text-4xl">inventory_2</span>
+<div>
+<div class="font-bold text-on-surface leading-tight">Cloud Solution Provider (CSP)</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest font-label-sm">Direct Licensing &amp; Support</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Expervia -->
+<section class="py-section-padding bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<div class="lg:col-span-1">
+<h2 class="font-headline-lg text-headline-lg mb-stack-md">Your Trusted Microsoft Partner</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg mb-stack-lg">
+                            We don't just implement software; we engineer competitive advantages using the world's most powerful ecosystem.
+                        </p>
+</div>
+<div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="p-8 rounded-xl bg-surface-container border border-white/5 space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+<h3 class="font-headline-md text-headline-md">AI &amp; Cloud Specialists</h3>
+<p class="text-on-surface-variant">Deep expertise in Azure OpenAI and custom LLM deployments for the enterprise.</p>
+</div>
+<div class="p-8 rounded-xl bg-surface-container border border-white/5 space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">shield</span>
+<h3 class="font-headline-md text-headline-md">Security-First Approach</h3>
+<p class="text-on-surface-variant">Zero Trust architectures built into every cloud environment we deploy.</p>
+</div>
+<div class="p-8 rounded-xl bg-surface-container border border-white/5 space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+<h3 class="font-headline-md text-headline-md">Industry-Focused</h3>
+<p class="text-on-surface-variant">Customized solutions for manufacturing, finance, and healthcare sectors.</p>
+</div>
+<div class="p-8 rounded-xl bg-surface-container border border-white/5 space-y-4">
+<span class="material-symbols-outlined text-primary text-3xl">query_stats</span>
+<h3 class="font-headline-md text-headline-md">Data-Driven Growth</h3>
+<p class="text-on-surface-variant">Leveraging the full Power Platform to turn raw data into strategic decisions.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Solutions Grid (Bento Style) -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-20">
+<div class="text-primary font-label-sm text-label-sm uppercase mb-4">Enterprise Ecosystem</div>
+<h2 class="font-headline-lg text-headline-lg">Future-Proof Microsoft Solutions</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter auto-rows-[300px]">
+<!-- Azure -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-2xl border border-white/5 bento-card">
+<div class="absolute inset-0 z-0 scale-105 group-hover:scale-110 transition-transform duration-700">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim via-surface-dim/40 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="Abstract visualization of a global cloud network. Glowing interconnected nodes and fiber optic lines spanning across a stylized dark world map. The lighting is dominated by neon purples and violets, creating a high-tech, futuristic atmosphere. The image feels vast, scalable, and secure, perfectly capturing the power of Microsoft Azure infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPInHNQPV9F5cTNOj_cMTgyazp48V2HApIvMrUT6NWO2uAkYD-3BWxr9x12mba1J-kLGYU8ke_f4Qzm7wQS2zY4VXV8oTr77UDY4y2dHuEZE6kDq5ZOZ1frKvlOiQzaJrZ7PpKMM8NB9SMaxYFk9Z7ND1K2K3YbkoA3JC6vJXTJl1W4Yek52OAPcH-Ur_No80jWp96qymHhEZF2kmiTq00l-_IqmmunuUYkYUT83btURtw3_PDq7Gftz-4X5FGpytj8g9rXYGJnx3Z"/>
+</div>
+<div class="relative z-20 h-full p-10 flex flex-col justify-end">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">cloud</span>
+<span class="font-label-sm text-label-sm uppercase text-primary">Build, Innovate, and Scale</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-2">Microsoft Azure</h3>
+<p class="text-on-surface-variant max-w-md">Cloud Strategy, Seamless Migration, and Multi-layered Security architecture.</p>
+</div>
+</div>
+<!-- Copilot -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-2xl border border-white/5 bento-card bg-surface-container-high p-8">
+<div class="h-full flex flex-col">
+<div class="p-3 bg-primary/10 w-fit rounded-lg mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">smart_toy</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Microsoft Copilot</h3>
+<p class="text-on-surface-variant mb-6">Transform Productivity with AI through Readiness Assessments and strategic implementation.</p>
+<div class="mt-auto pt-4 border-t border-white/5">
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> AI Adoption Roadmap</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs text-primary">check_circle</span> Data Governance</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- M365 -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-2xl border border-white/5 bento-card bg-surface-container-high p-8">
+<div class="h-full flex flex-col">
+<div class="p-3 bg-primary/10 w-fit rounded-lg mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">groups</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Microsoft 365</h3>
+<p class="text-on-surface-variant">Empower Your Workforce with Teams, SharePoint, and Defender for advanced collaboration.</p>
+</div>
+</div>
+<!-- Security -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-2xl border border-white/5 bento-card bg-[#1a1c1e]">
+<div class="p-8 h-full flex flex-col">
+<span class="material-symbols-outlined text-primary text-3xl mb-6">lock</span>
+<h3 class="font-headline-md text-headline-md mb-2">Microsoft Security</h3>
+<p class="text-on-surface-variant text-sm mb-4">Security Built for the Modern Enterprise featuring Defender, Sentinel, and Purview.</p>
+<div class="grid grid-cols-2 gap-2 mt-auto">
+<div class="px-3 py-1 rounded-full bg-white/5 text-[10px] font-label-sm uppercase text-center">Defender</div>
+<div class="px-3 py-1 rounded-full bg-white/5 text-[10px] font-label-sm uppercase text-center">Sentinel</div>
+</div>
+</div>
+</div>
+<!-- Dynamics / Power Platform -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-2xl border border-white/5 bento-card">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30" data-alt="Close-up of a high-resolution dashboard with vibrant purple and indigo data visualizations. Financial charts, growth metrics, and analytical graphs glow on a dark glass screen. The shallow depth of field focuses on a particularly steep growth curve, conveying success and modernization. The style is sleek, dark-themed corporate, representing Dynamics 365 and Power BI capabilities." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByOLwUPGr0RJ_ULFM7JBK8pUMY96NeqalOcOf95OdqjnsL6MrG_HFYr3X4lFgf6oI89_Zn5YMf-oLXi2PijUpt0_rM3YZQuVQcOu-pg5iCvfqpXGfXy9SzhrIoS1ExocxSCKe9CR7PqT5z2vOsE5bAaBs24cvk23GISXuJRTNvaYnAQ11Fpyfsx7Uda_zbnd5ja3HeSeyNizh2-evNfDX4Vdgsqh8y_hZt3akqcvcWecEyFq5iBsom8vOk_Lj5Hbm4WOvEU1k1y0BK"/>
+</div>
+<div class="relative z-20 p-8 h-full flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md mb-1">Dynamics 365</h3>
+<p class="text-xs text-on-surface-variant uppercase font-label-sm">Business Applications</p>
+</div>
+<div class="pt-4 border-t border-white/10">
+<h3 class="font-headline-md text-headline-md mb-1">Power Platform</h3>
+<p class="text-xs text-on-surface-variant uppercase font-label-sm">Automate &amp; Analyze</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CSP Services -->
+<section class="py-section-padding bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="space-y-stack-lg">
+<div class="text-primary font-label-sm text-label-sm uppercase">Cloud Solution Provider (CSP)</div>
+<h2 class="font-headline-lg text-headline-lg">Streamline Your Cloud Operations</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg">
+                            Avoid the complexity of direct billing and fragmented support. Expervia provides unified licensing management and technical expertise tailored to your business needs.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<div class="p-2 bg-primary/20 rounded-lg"><span class="material-symbols-outlined text-primary">payments</span></div>
+<div>
+<div class="font-bold">Cost Optimization</div>
+<div class="text-on-surface-variant">Consolidated billing and monthly usage audits to eliminate waste.</div>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="p-2 bg-primary/20 rounded-lg"><span class="material-symbols-outlined text-primary">support_agent</span></div>
+<div>
+<div class="font-bold">Priority Support</div>
+<div class="text-on-surface-variant">Direct access to Expervia's certified architects for rapid resolution.</div>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="p-2 bg-primary/20 rounded-lg"><span class="material-symbols-outlined text-primary">manage_accounts</span></div>
+<div>
+<div class="font-bold">Subscription Management</div>
+<div class="text-on-surface-variant">Full lifecycle management of your M365 and Azure licenses.</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/10 rounded-3xl blur-2xl"></div>
+<div class="relative glass-panel rounded-3xl p-10 overflow-hidden">
+<div class="mb-10 flex justify-between items-center">
+<div class="text-primary font-bold">Expervia Dashboard</div>
+<div class="text-on-surface-variant text-xs">Cloud Health: Optimal</div>
+</div>
+<div class="space-y-6">
+<div class="h-2 w-full bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4 rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-white/5 rounded-xl border border-white/5">
+<div class="text-xs text-on-surface-variant">License Utilization</div>
+<div class="text-2xl font-bold">94%</div>
+</div>
+<div class="p-4 bg-white/5 rounded-xl border border-white/5">
+<div class="text-xs text-on-surface-variant">Cost Saved</div>
+<div class="text-2xl font-bold text-primary">$12.4k</div>
+</div>
+</div>
+<div class="p-4 bg-primary/5 rounded-xl border border-primary/20">
+<div class="text-sm font-medium">Optimization Recommendation</div>
+<div class="text-xs text-on-surface-variant mt-1">3 Underutilized Azure VMs detected. Recommending downsizing.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Executive Assessments -->
+<section class="py-section-padding bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="max-w-3xl mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-stack-md">Complimentary Executive Assessments</h2>
+<p class="text-on-surface-variant font-body-lg text-body-lg">
+                        Get expert eyes on your environment. Our strategic assessments provide you with a detailed roadmap for modernization.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-stack-lg">
+<!-- Assessment 1 -->
+<div class="glass-panel p-8 rounded-2xl flex flex-col h-full group hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">bolt</span>
+<h3 class="font-headline-md text-headline-md mb-2">AI Readiness</h3>
+<p class="text-on-surface-variant text-sm flex-grow mb-6">Evaluate your data infrastructure and security posture for Azure OpenAI integration.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="#">
+                            Request <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Assessment 2 -->
+<div class="glass-panel p-8 rounded-2xl flex flex-col h-full group hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">cloud_upload</span>
+<h3 class="font-headline-md text-headline-md mb-2">Cloud Readiness</h3>
+<p class="text-on-surface-variant text-sm flex-grow mb-6">Identify legacy workloads ready for migration and modernization on Azure.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="#">
+                            Request <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Assessment 3 -->
+<div class="glass-panel p-8 rounded-2xl flex flex-col h-full group hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">smart_toy</span>
+<h3 class="font-headline-md text-headline-md mb-2">Copilot Readiness</h3>
+<p class="text-on-surface-variant text-sm flex-grow mb-6">Audit your M365 environment and data permissions for secure AI deployment.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="#">
+                            Request <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Assessment 4 -->
+<div class="glass-panel p-8 rounded-2xl flex flex-col h-full group hover:bg-white/5 transition-all">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">gpp_maybe</span>
+<h3 class="font-headline-md text-headline-md mb-2">Cyber Risk</h3>
+<p class="text-on-surface-variant text-sm flex-grow mb-6">A deep dive into your current security landscape and threat exposure.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="#">
+                            Request <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-section-padding bg-surface">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="relative rounded-3xl overflow-hidden bg-primary p-12 md:p-20 text-center">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.2)_0%,_transparent_70%)]"></div>
+<div class="relative z-10 max-w-2xl mx-auto space-y-stack-lg">
+<h2 class="font-display-lg text-display-lg text-on-primary">Ready to Unlock the Full Power of Microsoft?</h2>
+<p class="text-on-primary/80 font-body-lg text-body-lg">
+                            Join hundreds of organizations who have modernized their infrastructure with Expervia.
+                        </p>
+<div class="flex flex-col sm:flex-row justify-center gap-stack-md pt-stack-md">
+<button class="bg-on-primary text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-on-primary/90 transition-all active:scale-95">
+                                Book a Consultation
+                            </button>
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-bold text-lg hover:brightness-110 transition-all border border-on-primary/20">
+                                Request an Assessment
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant py-section-padding">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-20">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-6">Expervia</div>
+<p class="text-on-surface-variant text-sm">
+                        Enterprise AI and Cloud Modernization specialists. Driving innovation through engineering excellence.
+                    </p>
+</div>
+<div class="space-y-4">
+<div class="font-bold text-on-surface uppercase text-xs tracking-widest">Solutions</div>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Cloud Solutions</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">AI Governance</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Security Architecture</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<div class="font-bold text-on-surface uppercase text-xs tracking-widest">Resources</div>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Case Studies</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Documentation</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Insights</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<div class="font-bold text-on-surface uppercase text-xs tracking-widest">Company</div>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors text-sm" href="#">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 opacity-50">
+<div class="text-sm font-body-md">© 2024 Expervia Technologies. All rights reserved.</div>
+<div class="flex gap-6 mt-4 md:mt-0">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">language</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">share</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for Nav
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-4');
+                nav.classList.remove('h-20');
+                nav.style.height = '70px';
+            } else {
+                nav.classList.remove('py-4');
+                nav.style.height = '80px';
+            }
+        });
+
+        // Hover lift animation initialization
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.zIndex = "10";
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.zIndex = "1";
+            });
+        });
+    </script>
+</body></html>
