@@ -42,7 +42,7 @@ export const siteConfig = {
     // "latitude,longitude" coordinates (right-click the spot in Google Maps →
     // copy the coords). A text address geocodes to an approximate location.
     mapQuery: "Plot 21A Olubunmi Rotimi Street, Lekki Phase 1, Lagos, Nigeria",
-    phone: "+234 (0) 1 234 5678",
+    phones: ["+234 (0) 72 241 432", "+234 (0) 806 033 5189"],
     website: "www.experviatechnologies.com",
     emails: {
       general: "info@experviatechnologies.com",

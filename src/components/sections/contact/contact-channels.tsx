@@ -48,7 +48,7 @@ const channels: {
 ];
 
 export function ContactChannels() {
-  const { address, phone, website, mapQuery } = siteConfig.contact;
+  const { address, phones, website, mapQuery } = siteConfig.contact;
   const encodedQuery = encodeURIComponent(mapQuery);
   const mapEmbedSrc = `https://maps.google.com/maps?q=${encodedQuery}&z=16&output=embed`;
   const directionsHref = `https://www.google.com/maps/dir/?api=1&destination=${encodedQuery}`;
@@ -95,12 +95,17 @@ export function ContactChannels() {
               </div>
               <div className="flex items-start gap-4">
                 <Phone className="text-primary mt-1 size-5 shrink-0" />
-                <a
-                  href={`tel:${phone.replace(/[^+\d]/g, "")}`}
-                  className="text-on-surface-variant hover:text-primary transition-colors"
-                >
-                  {phone}
-                </a>
+                <div className="flex flex-col gap-1">
+                  {phones.map((phone) => (
+                    <a
+                      key={phone}
+                      href={`tel:${phone.replace(/[^+\d]/g, "")}`}
+                      className="text-on-surface-variant hover:text-primary transition-colors"
+                    >
+                      {phone}
+                    </a>
+                  ))}
+                </div>
               </div>
               <div className="flex items-start gap-4">
                 <Globe className="text-primary mt-1 size-5 shrink-0" />

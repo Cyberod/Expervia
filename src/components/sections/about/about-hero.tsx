@@ -4,11 +4,11 @@ import { Container } from "@/components/shared/container";
 const pillars = [
   {
     title: "Our Vision",
-    body: "To be Africa's premier architect of the intelligent future, bridging the gap between today's infrastructure and tomorrow's possibilities.",
+    body: "To be the global leader in driving transformative IT experiences, fostering innovation, and reshaping how businesses interact with technology through unparalleled customer experience and cutting-edge solutions.",
   },
   {
     title: "Our Mission",
-    body: "To empower African enterprises with world-class technical expertise, secure digital foundations, and transformative AI solutions.",
+    body: "To revolutionize the IT landscape by delivering innovative, tailored solutions that create exceptional customer experiences and empower our partners and customers to thrive in a dynamic digital world.",
   },
 ];
 
